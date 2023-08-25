@@ -6,10 +6,7 @@ namespace Exo4TDDBibliotheque.Test
         [TestMethod]
         public void TestRechercheVille_()
         {
-
-            RechercheVille rechercheVille = new RechercheVille();
-
-
+            throw new NotImplementedException();
         }
     }
 }
