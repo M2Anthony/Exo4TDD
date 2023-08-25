@@ -16,22 +16,24 @@ namespace Exo4TDDBibliotheque
 
         public List<String> Rechercher(String mot)
         {
+            List<string> villesTrouvees = new List<string>();
+
             if (mot.Length < 2)
             {
                 throw new NotFoundException();
             }
-
-            List<string> villesTrouvees = new List<string>();
-
-            foreach (string ville in Villes())
+            else
             {
-                if (ville.Contains(mot))
+                foreach (string ville in Villes())
                 {
-                    villesTrouvees.Add(ville);
+                    if (ville.StartsWith(mot))
+                    {
+                        villesTrouvees.Add(ville);
+                    }
                 }
-            }
 
-            return villesTrouvees;
+                return villesTrouvees;
+            }
         }
     }
 }
