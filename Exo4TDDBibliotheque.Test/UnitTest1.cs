@@ -4,9 +4,20 @@ namespace Exo4TDDBibliotheque.Test
     public class TestRechercheVille
     {
         [TestMethod]
-        public void TestRechercheVille_()
+        public void TestRechercheVille_Methode1()
         {
-            throw new NotImplementedException();
+            // Arrange
+
+            RechercheVille rechercheVille = new RechercheVille();
+
+            // Act
+
+            List<string> rechercher = rechercheVille.Rechercher("a");
+
+            // Assert
+
+            Assert.ThrowsException<NotFoundException> (() => rechercheVille.Rechercher("a"));
+
         }
     }
 }
