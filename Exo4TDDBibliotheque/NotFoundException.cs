@@ -8,8 +8,9 @@ namespace Exo4TDDBibliotheque
 {
     public class NotFoundException : Exception
     {
-        public NotFoundException() : base("***Une exception est levée de type NotFoundException***")
+        public NotFoundException() : base()
         {
+
         }
     }
 }

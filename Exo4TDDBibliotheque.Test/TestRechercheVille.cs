@@ -12,11 +12,10 @@ namespace Exo4TDDBibliotheque.Test
 
             // Act
 
-            List<string> rechercher = rechercheVille.Rechercher("a");
 
             // Assert
 
-            Assert.ThrowsException<NotFoundException> (() => rechercheVille.Rechercher("a"));
+            Assert.ThrowsException<NotFoundException>(() => rechercheVille.Rechercher("a"));
 
         }
     }
